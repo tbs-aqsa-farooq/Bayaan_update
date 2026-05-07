@@ -1,0 +1,248 @@
+@import "tailwindcss";
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+.body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  /* flex-grow: 1; */
+  overflow: hidden;
+}
+/* .main-content {
+  margin: 0;
+  padding: 2rem;
+} */
+:root {
+  --lead-gold: rgba(242, 161, 20, 0.902);
+  --lead-grey: rgb(53, 52, 52);
+}
+.text-1-5rem {
+  font-size: 1.5rem;
+}
+.section-header {
+  font-size: 3rem;
+  color: white;
+  background-color: var(--lead-grey);
+  margin-bottom: 1rem;
+  width: 100%;
+  text-align: center;
+}
+.hover-bg-white:hover {
+  color: var(--lead-gold);
+  background-color: white;
+  transition: 100ms ease-in-out;
+}
+.hover-bg-black:hover {
+  color: white;
+  background-color: black;
+  transition: 100ms ease-in-out;
+}
+.hover-black:hover {
+  color: black;
+  transition: 100ms ease-in-out;
+}
+.hover-less-opacity:hover {
+  opacity: 0.8;
+}
+.hover-bg-grey:hover {
+  color: var(--lead-gold);
+  background-color: var(--lead-grey);
+}
+.hover-bg-gold:hover {
+  color: white;
+  background-color: var(--lead-gold);
+}
+.hover-bg-white:hover {
+  color: var(--lead-gold);
+  background-color: white;
+}
+
+.btn-gold {
+  color: white;
+  /* background: linear-gradient(90deg, #f7b203, #a97a28); */
+  background-color: var(--lead-gold);
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+.btn-white {
+  color: var(--lead-gold);
+  background-color: white;
+}
+
+/* //////////////////////////////////////navbar */
+
+/* @media (max-width: 992px) {
+  .menu-toggle {
+    display: block;
+  }
+  .nav-right {
+    position: absolute;
+
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  .nav-right.active {
+    display: flex;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+  .navbar-link {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+  .search-form {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-box input {
+    width: 100%;
+    max-width: 250px;
+    min-width: unset;
+  }
+
+  .nav-search-btn {
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .app-header {
+    font-size: 1.5rem;
+  }
+
+  .navbar-content {
+    padding: 1rem;
+  }
+} */
+/* /////////////////////////////////////about */
+.object-fit {
+  object-fit: cover;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+/* Container */
+.card-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+/* Image Wrapper */
+.image-wrapper {
+  position: relative;
+  aspect-ratio: 1 / 1; /* aspect-square */
+  width: 100%;
+  background-color: #f1f5f9; /* bg-slate-100 */
+  border-radius: 0.75rem; /* rounded-xl */
+  overflow: hidden; /* Crucial for clipping the zoom effect */
+}
+
+/* The Image */
+.card-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card-container:hover .card-image {
+  transform: scale(1.05); /* scale-105 */
+}
+
+.store-content {
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .playlist-page {
+    padding: 1rem;
+  }
+
+  .playlist-header h1 {
+    font-size: 2rem;
+  }
+
+  .playlist-thumbnail img {
+    height: 250px;
+  }
+}
+
+/* /////////////////////////////////////footer */
+
+.footer-icon {
+  height: 25px;
+  display: flex;
+  margin-left: 0.5rem;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+.sliding-container {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: 25px;
+  overflow: hidden;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+
+.sliding-item {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-height: 25px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-link-wrapper:hover .sliding-item {
+  transform: translateY(-100%);
+}
+.info-content {
+  margin: 0;
+  align-items: center;
+  justify-content: end;
+  text-align: right;
+  align-content: end;
+}
