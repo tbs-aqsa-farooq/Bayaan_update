@@ -160,7 +160,7 @@ function Navbar() {
                   {counter}
                 </span>
               </button>
-              <button className="p-2 bg-black text-white">Profile</button>
+            
             </div>
           </div>
 
